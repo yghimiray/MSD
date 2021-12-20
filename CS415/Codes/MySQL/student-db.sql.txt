@@ -1,0 +1,11 @@
+create schema `students-db`;
+
+use `students-db`;
+
+create table `students-db`.`students`(
+	`studentId` char(11) NOT NULL,
+	`name` varchar(45) NOT NULL,
+	`dateOfAdmission` DATE NULL,
+	primary key (`studentId`)
+);
+

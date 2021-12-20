@@ -1,0 +1,27 @@
+.display-cart {
+    
+    text-align: center;
+    /* flex-wrap: wrap; */
+    /* float:inline-start; */
+    margin-left:auto;
+    margin-top: auto;
+   
+    
+  }
+  .cart-items {
+    
+    text-align: center;
+    /* flex-wrap: wrap; */
+    /* float:inline-start; */
+    margin-left:auto;
+    margin-top: auto;
+    display:inline-flex
+    
+  }
+  #welcome{
+    font-size:xx-large;
+    color: rgb(161, 228, 54);
+    font-style: oblique;
+    
+
+  }

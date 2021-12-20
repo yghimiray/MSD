@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ASCII Animation</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="ascii.css">
+    <script src="animations.js"></script>
+    <script src="ascii.js"></script>
+</head>
+
+<body>
+    <header>CS472 WAP ASCII Animation Viewer</header>
+
+    <textarea id="display_area" name="textarea" rows="20" cols="80"></textarea>
+
+    <div>
+        <fieldset id="control_fieldset">
+            <legend>Play Controls</legend>
+            <input type="button" name="Start" id="start_btn" value="Start" />
+            <input type="button" name="Stop" id="stop_btn" value="Stop" />
+        </fieldset>
+        <fieldset id="animation_fieldset">
+            <legend>Animation</legend>
+            <select id="animation_select" name="animation">
+                <option value="blank" selected>Blank</option> 
+                <option value="exercise">Exercise</option>
+                <option value="juggler">Juggler</option> 
+                <option value="bike">Bike</option>
+                <option value="dive">Dive</option>
+                <option value="custom">Custom</option>
+            </select>
+        </fieldset>
+        <fieldset id="size_fieldset">
+            <legend>Size</legend>
+            <select id="size_select" name="size">
+                <option value="7pt">Tiny</option> 
+                <option value="10pt">Small</option>
+                <option value="12pt" selected>Medium</option>
+                <option value="16pt">Large</option>
+                <option value="24pt">Extra Large</option>
+                <option value="32pt">XXL</option>
+            </select>
+        </fieldset>
+        <fieldset id="speed_fieldset">
+            <legend>Speed</legend>
+            <label id="box_label"><input type="checkbox" id="cbox">Turbo</label>
+        </fieldset>
+    </div>
+
+
+</body>
+
+</html>

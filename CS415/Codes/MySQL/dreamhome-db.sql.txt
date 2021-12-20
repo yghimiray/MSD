@@ -1,0 +1,26 @@
+CREATE SCHEMA `dreamhome` ;
+
+CREATE TABLE `dreamhome`.`branch` (
+  `branchNo` CHAR(4) NOT NULL,
+  `street` VARCHAR(25) NOT NULL,
+  `city` VARCHAR(15) NOT NULL CHECK(`city`IN('London','New York')),
+  `postCode` CHAR(8) NOT NULL,
+  PRIMARY KEY (`branchNo`));
+
+
+CREATE TABLE `dreamhome`.`staffs` (
+  `staffNo` VARCHAR(4) NOT NULL,
+  `fName` VARCHAR(45) NOT NULL,
+  `lName` VARCHAR(45) NOT NULL,
+  `position` VARCHAR(16) NOT NULL,
+  `sex` CHAR(1) NOT NULL,
+  `dob` DATE NULL,
+  `salary` DECIMAL(9,2) NOT NULL,
+  `branchNo` CHAR(4) NULL,
+  PRIMARY KEY (`staffNo`),
+  INDEX `FK_branch_staff_idx` (`branchNo` ASC) VISIBLE,
+  CONSTRAINT `FK_branch_staff`
+    FOREIGN KEY (`branchNo`)
+    REFERENCES `dreamhome`.`branch` (`branchNo`)
+    ON DELETE SET NULL
+    ON UPDATE CASCADE);

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="author" content="Yogesh">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Books</title>
+
+  <link href="style.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="booklist.js"></script>
+
+
+
+  <div class="navbar">
+    <a class="navbar-brand" href="#" ;>The CityLibrary® </a>
+    <a href="index.html">Home</a>
+    <div class="subnav">
+      <button class="subnavbtn">About <i class="fa fa-caret-down"></i></button>
+      <div class="subnav-content">
+        <a href="aboutLibrary.html">Library</a>
+        <a href="team.html">Team</a>
+        <a href="careers.html">Careers</a>
+      </div>
+    </div>
+    <div class="subnav">
+      <button class="subnavbtn">Books <i class="fa fa-caret-down"></i></button>
+      <div class="subnav-content">
+        <a href="booklist.html">List </a>
+        <a href="addBook.html">Add </a>
+        <a href="updateBook.html">Update </a>
+        <a href="deleteBook.html">Delete </a>
+        <a href="searchBook.html">Search </a>
+      </div>
+    </div>
+    <div class="subnav">
+      <button class="subnavbtn">Contact <i class="fa fa-caret-down"></i></button>
+      <div class="subnav-content">
+        <a href="email.html">Email </a>
+        <a href="phone.html">Phone</a>
+      </div>
+    </div>
+    <a class="navbar-brand" href="#" style="position:relative; left:750px" ;>Welcome Guest </a>
+  </div>
+
+
+  <script>
+    $(document).ready(function () {
+      $("button").click(function () {
+        $("p").toggle();
+      });
+    });
+  </script>
+
+
+<style>
+  /* * {
+    box-sizing: border-box;
+  } --> */
+  
+  .row {
+/* display: flex; */
+    padding-left: 150px;
+  }
+  
+  /* Create two equal columns that sits next to each other */
+  <!-- .column {
+    flex: 50%;
+    padding: 10px;
+    /* height: 300px; Should be removed. Only for demonstration */
+  } -->
+  </style>
+
+
+
+
+
+
+
+
+</head>
+
+<body>
+  <h1 id="update-heading" style="font-size:30px ; position:relative; left:300px">List of Books</h1>
+  <div id="bookDiv" class="row">
+    
+    <!-- <button style="font-size:20px">Book's Name</button>
+    <p>Book's ID</p>
+    <p>Book's ISBN</p> -->
+
+  </div>
+
+
+
+
+
+  <!-- <div class="container">
+    <h2>Simple Collapsible</h2>
+    <p>Click on the button to toggle between showing and hiding content.</p>
+    <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">Simple collapsible</button>
+    <div id="demo" class="collapse">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    </div>
+  </div> -->
+
+
+
+
+</body>
+
+</html>

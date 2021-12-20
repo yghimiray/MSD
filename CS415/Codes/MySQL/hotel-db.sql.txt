@@ -1,0 +1,87 @@
+CREATE SCHEMA `hotel` ;
+
+CREATE TABLE `hotel`.`hotel` (
+  `hotelNo` CHAR(4) NOT NULL,
+  `hotelName` VARCHAR(45) NOT NULL,
+  `city` VARCHAR(25) NOT NULL,
+  PRIMARY KEY (`hotelNo`));
+
+
+
+CREATE TABLE `hotel`.`room` (
+  `roomNo` INT NOT NULL,
+  `hotelNo` CHAR(4) NOT NULL,
+  `type` VARCHAR(25) NOT NULL,
+  `price` DECIMAL(9,2) NOT NULL,
+  PRIMARY KEY (`roomNo`, `hotelNo`));
+
+
+
+CREATE TABLE `hotel`.`booking` (
+  `hotelNo` CHAR(4) NOT NULL,
+  `guestNo` CHAR(5) NOT NULL,
+  `dateFrom` DATE NOT NULL,
+  `dateTo` DATE NULL,
+  `roomNo` INT NULL,
+  PRIMARY KEY (`hotelNo`, `guestNo`, `dateFrom`));
+
+
+
+CREATE TABLE `hotel`.`guest` (
+  `guestNo` INT NOT NULL,
+  `guestName` VARCHAR(45) NOT NULL,
+  `guestAddress` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`guestNo`));
+
+
+
+
+ALTER TABLE `hotel`.`room` 
+ADD INDEX `FK_hotel_room_idx` (`hotelNo` ASC) VISIBLE;
+;
+ALTER TABLE `hotel`.`room` 
+ADD CONSTRAINT `FK_hotel_room`
+  FOREIGN KEY (`hotelNo`)
+  REFERENCES `hotel`.`hotel` (`hotelNo`)
+  ON DELETE NO ACTION
+  ON UPDATE CASCADE;
+
+
+
+ALTER TABLE `hotel`.`booking` 
+ADD INDEX `FK_room_booking_idx` (`roomNo` ASC) VISIBLE;
+;
+ALTER TABLE `hotel`.`booking` 
+ADD CONSTRAINT `FK_room_booking`
+  FOREIGN KEY (`roomNo`)
+  REFERENCES `hotel`.`room` (`roomNo`)
+  ON DELETE SET NULL
+  ON UPDATE CASCADE;
+
+
+
+ALTER TABLE `hotel`.`booking` 
+CHANGE COLUMN `guestNo` `guestNo` INT NOT NULL ;
+
+
+
+
+ALTER TABLE `hotel`.`guest` 
+ADD CONSTRAINT `FK_booking_guest`
+  FOREIGN KEY (`guestNo`)
+  REFERENCES `hotel`.`booking` (`guestNo`)
+  ON DELETE NO ACTION
+  ON UPDATE CASCADE;
+
+
+ALTER TABLE `hotel`.`booking` 
+ADD INDEX `FK_guest_booking_idx` (`guestNo` ASC) VISIBLE;
+;
+ALTER TABLE `hotel`.`booking` 
+ADD CONSTRAINT `FK_guest_booking`
+  FOREIGN KEY (`guestNo`)
+  REFERENCES `hotel`.`guest` (`guestNo`)
+  ON DELETE NO ACTION
+  ON UPDATE NO ACTION;
+
+

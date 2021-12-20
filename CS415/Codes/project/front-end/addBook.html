@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="author" content="Yogesh">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Book</title>
+
+  <link href="style.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="addBook.js"></script>
+
+
+
+  <div class="navbar">
+    <a class="navbar-brand" href="#" ;>The CityLibrary® </a>
+    <a href="index.html">Home</a>
+    <div class="subnav">
+      <button class="subnavbtn">About <i class="fa fa-caret-down"></i></button>
+      <div class="subnav-content">
+        <a href="aboutLibrary.html">Library</a>
+        <a href="team.html">Team</a>
+        <a href="careers.html">Careers</a>
+      </div>
+    </div>
+    <div class="subnav">
+      <button class="subnavbtn">Books <i class="fa fa-caret-down"></i></button>
+      <div class="subnav-content">
+        <a href="booklist.html">List </a>
+        <a href="addBook.html">Add </a>
+        <a href="updateBook.html">Update </a>
+        <a href="deleteBook.html">Delete </a>
+        <a href="searchBook.html">Search </a>
+      </div>
+    </div>
+    <div class="subnav">
+      <button class="subnavbtn">Contact <i class="fa fa-caret-down"></i></button>
+      <div class="subnav-content">
+        <a href="email.html">Email </a>
+        <a href="phone.html">Phone</a>
+      </div>
+    </div>
+    <a class="navbar-brand" href="#" style="position:relative; left:750px" ;>Welcome Guest </a>
+  </div>
+
+
+<style>
+.row {
+padding-left: 150px;
+  }
+  </style>
+
+
+
+
+
+
+
+
+</head>
+
+<body>
+
+  <h1 id="add-heading" style="font-size:30px ; position:relative; left:220px">Add New Book</h1>
+  <div id="addBookDiv" class="row">
+    <form id="add-form" style="font-size:25px;  line-height: 2.5" >
+
+      <div class="mb-3" >
+        <label for="id" class="form-label" style="position:relative; left:80px">Book's ID </label>
+          <input type="text" class="form-control" id="id" size="20" style="position:fixed; left:480px ; line-height: 1.8; font-size:20px" required>
+      </div>
+
+      <div class="mb-3">
+          <label for="isbn" class="form-label"style="position:relative; left:80px">ISBN</label>
+          <input type="text" class="form-control" id="isbn" size="70" style="position:fixed; left:480px ; line-height: 1.8; font-size:20px" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="title" class="form-label" style="position:relative; left:80px">Title</label>
+          <input type="text" class="form-control" id="title" size="70" style="position:fixed; left:480px ; line-height: 1.8; font-size:20px"required>
+      </div>
+      
+      <div class="mb-3">
+          <label for="fee" class="form-label" style="position:relative; left:80px">Overdue Fee</label>
+          <input type="text" class="form-control" id="fee" size="20" style="position:fixed; left:480px ; line-height: 1.8; font-size:20px"required>
+      </div>
+
+      <div class="mb-3">
+        <label for="publisher" class="form-label" style="position:relative; left:80px">Publisher</label>
+        <input type="text" class="form-control" id="publisher" size="70" style="position:fixed; left:480px ; line-height: 1.8; font-size:20px"required>
+    </div>
+
+    <div class="mb-3">
+      <label for="date" class="form-label" style="position:relative; left:80px">Published On</label>
+      <input type="text" class="form-control" id="date" size="20" style="position:fixed; left:480px; line-height: 1.8; font-size:20px"required>
+  </div>
+
+      <button type="submit" class="btn btn-primary" id="add-btn" style="position:fixed; left:480px; font-size: 25px ;border-radius: 8px; background-color: rgb(4, 70, 21); 
+      color: white; border: 5px solid #080808; ">Submit</button>
+  </form>
+
+    </div>
+
+
+
+
+
+
+
+
+</body>
+
+</html>
