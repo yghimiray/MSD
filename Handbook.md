@@ -1,3 +1,5 @@
+
+
 # Object
 1. To check if the property exists in an object or not:
 
@@ -1032,6 +1034,7 @@ export default function App() {
     ng new nameOfProject
 
     ## Start/run the Angular project
+    Go to the new Project //cd nameOfProject
     ng serve
     OR shortcut
     ng s -o
@@ -1109,3 +1112,13 @@ export default function App() {
     </nav>
     <router-outlet></router-outlet>
 
+
+
+# Redux in Angular
+npm i redux @angular-redux/store
+In App.module.ts file add these things
+import { NgRedux, NgReduxModule  } from '@angular-redux/store';
+imports: [NgReduxModule]
+constructor{
+    
+}
